@@ -1,0 +1,52 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Jaden Allen"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.11"
+			],
+			"dash": [
+				"github:bridge-core/dash-compiler#8fa35c73292f6382747d0f411fca26431a6d2c8e"
+			]
+		}
+	},
+	"header": {
+		"name": "Scripting Api Tutorial",
+		"description": "This is an example tutorial for scripting api",
+		"min_engine_version": [
+			1,
+			20,
+			50
+		],
+		"uuid": "8b14ad92-0521-46a9-8663-12756df6407a",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "7b38a733-7e34-48a0-9329-e32980f53b3a",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "23d494bd-2669-4057-b5fb-3809e3ac06f5",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}
