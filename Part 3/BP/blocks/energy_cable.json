@@ -1,0 +1,77 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ja:energy_cable",
+			"states": {
+				"ja:top": [
+					false,
+					true
+				],
+				"ja:bottom": [
+					false,
+					true
+				],
+				"ja:east": [
+					false,
+					true
+				],
+				"ja:west": [
+					false,
+					true
+				],
+				"ja:north": [
+					false,
+					true
+				],
+				"ja:south": [
+					false,
+					true
+				],
+				"ja:center": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": {
+				"identifier": "geometry.energy_cable",
+				"bone_visibility": {
+					"center": true,
+					"top": "query.block_state('ja:top') == true",
+					"bottom": "query.block_state('ja:bottom') == true",
+					"east": "query.block_state('ja:east') == true",
+					"west": "query.block_state('ja:west') == true",
+					"north": "query.block_state('ja:north') == true",
+					"south": "query.block_state('ja:south') == true"
+				}
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "ja_energy_cable",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:queued_ticking": {
+				"looping": true,
+				"interval_range": [
+					0.05,
+					0.05
+				],
+				"on_tick": {
+					"event": "ja:ticking",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"ja:ticking": {
+				"run_command": {
+					"command": "/scriptevent ja:connect_cables",
+					"target": "self"
+				}
+			}
+		}
+	}
+}
